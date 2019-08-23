@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C93CCFCC230EBE7900205128 /* SingleDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = C93CCFCB230EBE7900205128 /* SingleDemo.m */; };
 		C9D06095230C17B3003EFE3B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D06094230C17B3003EFE3B /* AppDelegate.m */; };
 		C9D06098230C17B3003EFE3B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D06097230C17B3003EFE3B /* ViewController.m */; };
 		C9D0609B230C17B3003EFE3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9D06099230C17B3003EFE3B /* Main.storyboard */; };
@@ -28,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C93CCFCA230EBE7900205128 /* SingleDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SingleDemo.h; sourceTree = "<group>"; };
+		C93CCFCB230EBE7900205128 /* SingleDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SingleDemo.m; sourceTree = "<group>"; };
 		C9D06090230C17B3003EFE3B /* 线程Thread.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "线程Thread.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9D06093230C17B3003EFE3B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C9D06094230C17B3003EFE3B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -90,6 +93,8 @@
 				C9D06097230C17B3003EFE3B /* ViewController.m */,
 				C9D060B7230C1CB6003EFE3B /* TicketManager.h */,
 				C9D060B8230C1CB6003EFE3B /* TicketManager.m */,
+				C93CCFCA230EBE7900205128 /* SingleDemo.h */,
+				C93CCFCB230EBE7900205128 /* SingleDemo.m */,
 				C9D06099230C17B3003EFE3B /* Main.storyboard */,
 				C9D0609C230C17B6003EFE3B /* Assets.xcassets */,
 				C9D0609E230C17B6003EFE3B /* LaunchScreen.storyboard */,
@@ -208,6 +213,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C93CCFCC230EBE7900205128 /* SingleDemo.m in Sources */,
 				C9D06098230C17B3003EFE3B /* ViewController.m in Sources */,
 				C9D060B9230C1CB6003EFE3B /* TicketManager.m in Sources */,
 				C9D060A3230C17B6003EFE3B /* main.m in Sources */,
