@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "TicketManager.h"
 #import "SingleDemo.h"
+#import "CustomOPeration.h"
 
 @interface ViewController ()
 /** <#name#> */
@@ -31,18 +32,30 @@
     [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [button addTarget:self action:@selector(operationClick) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
+    
+    button = [[UIButton alloc]initWithFrame:CGRectMake(100, 150, 250, 50)];
+    [button setTitle:@"NSOperationQueue" forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(operationQueueClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
+    
+    button = [[UIButton alloc]initWithFrame:CGRectMake(100, 200, 250, 50)];
+    [button setTitle:@"CustomOperation" forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(customOperationClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
 }
 #pragma mark NSOperation
 -(void)operationClick{
-    // 方式一
+    /** 方式一
     NSLog(@"invocationOperationAction");
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         NSInvocationOperation * operation = [[NSInvocationOperation alloc]initWithTarget:self selector:@selector(invocationOperationAction) object:nil];
-//        [operation start]; // 在当前线程执行
+        [operation start]; // 在当前线程执行
         NSLog(@"invocationOperationAction end");
     });
-    
-    // 方式二
+    */
+    /** 方式二
     NSLog(@"NSBlockOperation");
     NSBlockOperation * blockOperation = [NSBlockOperation blockOperationWithBlock:^{
         NSLog(@"NSBlockOperation begin");
@@ -51,13 +64,10 @@
             [NSThread sleepForTimeInterval:2];
         }
     }];
-//    [blockOperation start];
+    [blockOperation start];
+    */
     
-    if (!self.operationQueue) {
-        self.operationQueue = [[NSOperationQueue alloc]init];
-    }
-    [self.operationQueue addOperation:blockOperation];
-    NSLog(@"end");
+    
 }
 -(void)invocationOperationAction{
     NSLog(@"invocationOperationAction begin");
@@ -65,6 +75,58 @@
         NSLog(@"InvocationOperation %d",i);
         [NSThread sleepForTimeInterval:2];
     }
+}
+#pragma mark NSOperationQueue
+-(void)operationQueueClick{
+    NSLog(@"NSOperationQueue");
+    NSBlockOperation * blockOperation = [NSBlockOperation blockOperationWithBlock:^{
+        NSLog(@"NSOperationQueue begin");
+        for (int i = 0 ; i < 3; i ++) {
+            NSLog(@"NSOperationQueue %d",i);
+            [NSThread sleepForTimeInterval:2];
+        }
+    }];
+    // 异步执行 开启新线程
+    if (!self.operationQueue) {
+        self.operationQueue = [[NSOperationQueue alloc]init];
+    }
+    [self.operationQueue addOperation:blockOperation];
+    NSLog(@"NSOperationQueue end");
+}
+#pragma mark CustomOperation
+-(void)customOperationClick{
+    
+    NSLog(@"CustomOPeration start");
+    
+    if (!self.operationQueue) {
+        self.operationQueue = [[NSOperationQueue alloc]init];
+    }
+    // 设置最大并发数
+//    [self.operationQueue setMaxConcurrentOperationCount:1];
+    
+    CustomOPeration * customA = [[CustomOPeration alloc]initWithName:@"OperationA"];
+    
+    CustomOPeration * customB = [[CustomOPeration alloc]initWithName:@"OperationB"];
+    
+    CustomOPeration * customC = [[CustomOPeration alloc]initWithName:@"OperationC"];
+    
+    CustomOPeration * customD = [[CustomOPeration alloc]initWithName:@"OperationD"];
+    
+    // 设置依赖 不能相互依赖
+    [customD addDependency:customA];
+    [customA addDependency:customC];
+    [customC addDependency:customB];
+    
+    [self.operationQueue addOperation:customA];
+    
+    [self.operationQueue addOperation:customB];
+    
+    [self.operationQueue addOperation:customC];
+    
+    [self.operationQueue addOperation:customD];
+    
+    
+    NSLog(@"CustomOPeration end");
 }
 #pragma mark - GCD
 -(void)testGCD{
