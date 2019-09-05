@@ -15,9 +15,7 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
+    [super viewDidLoad];    
     
     //题 1
     // 死锁
