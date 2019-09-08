@@ -15,8 +15,7 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];    
-    
+    [super viewDidLoad];
     //题 1
     // 死锁
     // 同步提交任务，无论是提交到并发队列还是串行队列，都是在当前线程执行

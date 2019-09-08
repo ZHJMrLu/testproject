@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24E122C623253E5700121E92 /* WMPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E122B923253E5700121E92 /* WMPageController.m */; };
+		24E122C723253E5700121E92 /* UIViewController+WMPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E122BA23253E5700121E92 /* UIViewController+WMPageController.m */; };
+		24E122C823253E5700121E92 /* WMMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E122C023253E5700121E92 /* WMMenuItem.m */; };
+		24E122C923253E5700121E92 /* WMScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E122C123253E5700121E92 /* WMScrollView.m */; };
+		24E122CA23253E5700121E92 /* WMMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E122C223253E5700121E92 /* WMMenuView.m */; };
+		24E122CB23253E5700121E92 /* WMProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E122C323253E5700121E92 /* WMProgressView.m */; };
 		C90E1DDC2318FDBC00CD0D16 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C90E1DDB2318FDBC00CD0D16 /* AppDelegate.m */; };
 		C90E1DDF2318FDBC00CD0D16 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C90E1DDE2318FDBC00CD0D16 /* FirstViewController.m */; };
 		C90E1DE22318FDBC00CD0D16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C90E1DE02318FDBC00CD0D16 /* Main.storyboard */; };
@@ -34,6 +40,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		24E122B923253E5700121E92 /* WMPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMPageController.m; sourceTree = "<group>"; };
+		24E122BA23253E5700121E92 /* UIViewController+WMPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+WMPageController.m"; sourceTree = "<group>"; };
+		24E122BC23253E5700121E92 /* WMScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMScrollView.h; sourceTree = "<group>"; };
+		24E122BD23253E5700121E92 /* WMMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMMenuItem.h; sourceTree = "<group>"; };
+		24E122BE23253E5700121E92 /* WMMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMMenuView.h; sourceTree = "<group>"; };
+		24E122BF23253E5700121E92 /* WMProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMProgressView.h; sourceTree = "<group>"; };
+		24E122C023253E5700121E92 /* WMMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMMenuItem.m; sourceTree = "<group>"; };
+		24E122C123253E5700121E92 /* WMScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMScrollView.m; sourceTree = "<group>"; };
+		24E122C223253E5700121E92 /* WMMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMMenuView.m; sourceTree = "<group>"; };
+		24E122C323253E5700121E92 /* WMProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMProgressView.m; sourceTree = "<group>"; };
+		24E122C423253E5700121E92 /* WMPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMPageController.h; sourceTree = "<group>"; };
+		24E122C523253E5700121E92 /* UIViewController+WMPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+WMPageController.h"; sourceTree = "<group>"; };
 		C90E1DD72318FDBC00CD0D16 /* 仿写WMPageController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "仿写WMPageController.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C90E1DDA2318FDBC00CD0D16 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C90E1DDB2318FDBC00CD0D16 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -81,6 +99,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24E122B823253E5700121E92 /* WMPageController */ = {
+			isa = PBXGroup;
+			children = (
+				24E122B923253E5700121E92 /* WMPageController.m */,
+				24E122BA23253E5700121E92 /* UIViewController+WMPageController.m */,
+				24E122BB23253E5700121E92 /* WMMenuView */,
+				24E122C423253E5700121E92 /* WMPageController.h */,
+				24E122C523253E5700121E92 /* UIViewController+WMPageController.h */,
+			);
+			path = WMPageController;
+			sourceTree = "<group>";
+		};
+		24E122BB23253E5700121E92 /* WMMenuView */ = {
+			isa = PBXGroup;
+			children = (
+				24E122BC23253E5700121E92 /* WMScrollView.h */,
+				24E122BD23253E5700121E92 /* WMMenuItem.h */,
+				24E122BE23253E5700121E92 /* WMMenuView.h */,
+				24E122BF23253E5700121E92 /* WMProgressView.h */,
+				24E122C023253E5700121E92 /* WMMenuItem.m */,
+				24E122C123253E5700121E92 /* WMScrollView.m */,
+				24E122C223253E5700121E92 /* WMMenuView.m */,
+				24E122C323253E5700121E92 /* WMProgressView.m */,
+			);
+			path = WMMenuView;
+			sourceTree = "<group>";
+		};
 		C90E1DCE2318FDBC00CD0D16 = {
 			isa = PBXGroup;
 			children = (
@@ -102,7 +147,8 @@
 		C90E1DD92318FDBC00CD0D16 /* 仿写WMPageController */ = {
 			isa = PBXGroup;
 			children = (
-				C90E1E0B23190B0D00CD0D16 /* WMPageController */,
+				24E122B823253E5700121E92 /* WMPageController */,
+				C90E1E0B23190B0D00CD0D16 /* RWWMPageController */,
 				C90E1E072319032B00CD0D16 /* demovc */,
 				C90E1DDA2318FDBC00CD0D16 /* AppDelegate.h */,
 				C90E1DDB2318FDBC00CD0D16 /* AppDelegate.m */,
@@ -141,7 +187,7 @@
 			path = demovc;
 			sourceTree = "<group>";
 		};
-		C90E1E0B23190B0D00CD0D16 /* WMPageController */ = {
+		C90E1E0B23190B0D00CD0D16 /* RWWMPageController */ = {
 			isa = PBXGroup;
 			children = (
 				C90E1E0F23190BDB00CD0D16 /* RWWMMenuView.h */,
@@ -151,7 +197,7 @@
 				C90E1E0C23190B3600CD0D16 /* RWWMPageController.h */,
 				C90E1E0D23190B3600CD0D16 /* RWWMPageController.m */,
 			);
-			path = WMPageController;
+			path = RWWMPageController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,16 +300,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24E122C623253E5700121E92 /* WMPageController.m in Sources */,
+				24E122CA23253E5700121E92 /* WMMenuView.m in Sources */,
+				24E122C823253E5700121E92 /* WMMenuItem.m in Sources */,
 				C90E1E032319009E00CD0D16 /* SecondViewController.m in Sources */,
 				C90E1E1123190BDB00CD0D16 /* RWWMMenuView.m in Sources */,
 				C90E1DDF2318FDBC00CD0D16 /* FirstViewController.m in Sources */,
 				C90E1E0E23190B3600CD0D16 /* RWWMPageController.m in Sources */,
 				C90E1E06231900AE00CD0D16 /* ThirdViewController.m in Sources */,
+				24E122C923253E5700121E92 /* WMScrollView.m in Sources */,
 				C90E1E0A2319036600CD0D16 /* MenuViewStyleTableViewController.m in Sources */,
 				C92FA709231A49D700DAFA9B /* RWWMScrollView.m in Sources */,
 				C90E1DEA2318FDBE00CD0D16 /* main.m in Sources */,
 				C90E1DDC2318FDBC00CD0D16 /* AppDelegate.m in Sources */,
 				C90E1E002319005400CD0D16 /* MainTableViewController.m in Sources */,
+				24E122C723253E5700121E92 /* UIViewController+WMPageController.m in Sources */,
+				24E122CB23253E5700121E92 /* WMProgressView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
