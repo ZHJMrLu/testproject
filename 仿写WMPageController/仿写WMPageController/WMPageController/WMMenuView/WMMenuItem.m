@@ -63,7 +63,8 @@
 - (void)setSelected:(BOOL)selected withAnimation:(BOOL)animation {
     _selected = selected;
     self.imageView.hidden = !_selected;
-    [self layoutSubviews];
+    [self setNeedsLayout];
+    [self layoutIfNeeded];
     if (!animation) {
         self.rate = selected ? 1.0 : 0.0;
         return;
